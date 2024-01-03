@@ -92,6 +92,7 @@ const TaskList: React.FC = () => {
         visible={editTaskModalVisible}
         onCancel={handleEditTaskCancel}
         footer={null}
+        destroyOnClose
       >
         {selectedTask && (
           <EditTask task={selectedTask} onCancel={handleEditTaskCancel} />
@@ -102,6 +103,7 @@ const TaskList: React.FC = () => {
         visible={deleteTaskModalVisible}
         onCancel={handleDeleteTaskCancel}
         footer={null}
+        destroyOnClose
       >
         {selectedTask && (
           <DeleteTask task={selectedTask} onCancel={handleDeleteTaskCancel} />

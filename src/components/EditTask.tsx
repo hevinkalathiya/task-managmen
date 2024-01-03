@@ -12,6 +12,8 @@ interface EditTaskProps {
 const EditTask: React.FC<EditTaskProps> = ({ task, onCancel }) => {
   const dispatch = useDispatch();
   const [form] = Form.useForm();
+  console.log(task);
+  
 
   const handleEditTask = (values: any) => {
     if (values.title && values.description) {
@@ -22,14 +24,16 @@ const EditTask: React.FC<EditTaskProps> = ({ task, onCancel }) => {
         })
       );
       onCancel();
+      form.resetFields();
     }
   };
 
   return (
-    <Form form={form} onFinish={handleEditTask} initialValues={task}>
+    <Form form={form} onFinish={handleEditTask}>
       <Form.Item
         label="Title"
         name="title"
+        initialValue={task.title}
         rules={[
           {
             required: true,
@@ -42,6 +46,7 @@ const EditTask: React.FC<EditTaskProps> = ({ task, onCancel }) => {
       <Form.Item
         label="Description"
         name="description"
+        initialValue={task.description}
         rules={[
           {
             required: true,
