@@ -88,7 +88,6 @@ const TaskList: React.FC = () => {
         )}
       />
       <Modal
-        title="Edit Task"
         visible={editTaskModalVisible}
         onCancel={handleEditTaskCancel}
         footer={null}

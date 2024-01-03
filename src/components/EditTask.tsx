@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import React from "react";
-import { Form, Input, Button } from "antd";
+import { Form, Input, Button, Typography } from "antd";
 import { editTask } from "../Slice/tasksSlice";
 import { useDispatch } from "react-redux";
 
@@ -8,6 +8,7 @@ interface EditTaskProps {
   task: any;
   onCancel: () => void;
 }
+const {Title} = Typography;
 
 const EditTask: React.FC<EditTaskProps> = ({ task, onCancel }) => {
   const dispatch = useDispatch();
@@ -30,8 +31,8 @@ const EditTask: React.FC<EditTaskProps> = ({ task, onCancel }) => {
 
   return (
     <Form form={form} onFinish={handleEditTask}>
+      <Title level={5}>Task Name</Title>
       <Form.Item
-        label="Title"
         name="title"
         initialValue={task.title}
         rules={[
@@ -43,8 +44,8 @@ const EditTask: React.FC<EditTaskProps> = ({ task, onCancel }) => {
       >
         <Input placeholder="Task Title" />
       </Form.Item>
+      <Title level={5}>Task Description</Title>
       <Form.Item
-        label="Description"
         name="description"
         initialValue={task.description}
         rules={[
