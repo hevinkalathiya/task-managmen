@@ -2,6 +2,10 @@
 
 This repository contains the source code for a task management app built with Vite.
 
+## Live Demo
+
+Check out the live demo of the Task Management App [here](https://task-managmen.vercel.app/).
+🤯
 ## Getting Started
 
 Follow the steps below to set up and run the Vite project locally.
