@@ -21,7 +21,7 @@ const DeleteTask: React.FC<DeleteTaskProps> = ({ task, onCancel }) => {
     <div>
       <p>Are you sure you want to delete this task?</p>
       <Button
-        className="mr-2"
+        className="mr-2 mt-3"
         danger
         onClick={handleDeleteTask}
       >
