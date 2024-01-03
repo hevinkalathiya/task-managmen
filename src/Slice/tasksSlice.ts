@@ -26,18 +26,16 @@ const tasksSlice = createSlice({
       const index = state.tasks.findIndex(
         (task) => task.id === action.payload.id
       );
-      if (index !== -1) {
-        state.tasks[index] = action.payload;
-      }
+
+      state.tasks[index] = action.payload;
     },
     deleteTask: (state, action: PayloadAction<number>) => {
       state.tasks = state.tasks.filter((task) => task.id !== action.payload);
     },
     toggleTask: (state, action: PayloadAction<number>) => {
       const index = state.tasks.findIndex((task) => task.id === action.payload);
-      if (index !== -1) {
-        state.tasks[index].completed = !state.tasks[index].completed;
-      }
+
+      state.tasks[index].completed = !state.tasks[index].completed;
     },
   },
 });

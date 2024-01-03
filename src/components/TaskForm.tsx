@@ -5,6 +5,7 @@ import { addTask } from "../Slice/tasksSlice";
 import { useDispatch } from "react-redux";
 
 const TaskForm: React.FC = () => {
+  const [form] = Form.useForm();
   const dispatch = useDispatch();
 
   const onFinish = (values: any) => {
@@ -22,7 +23,6 @@ const TaskForm: React.FC = () => {
     }
   };
 
-  const [form] = Form.useForm();
 
   return (
     <>

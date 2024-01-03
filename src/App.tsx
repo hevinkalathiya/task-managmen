@@ -6,9 +6,9 @@ function App() {
   return (
     <div className="max-w-3xl mx-auto">
       <div className="">
-        <h1 className="m-auto text-3xl p-5 font-bold text-gray-700">
-        Task-Managment
-      </h1>
+        <h1 className="flex items-center justify-center text-3xl p-5 font-bold bg-clip-text text-transparent bg-gradient-to-r from-sky-500 to-blue-500">
+          Task-Managment
+        </h1>
         <TaskForm />
         <TaskList />
       </div>
